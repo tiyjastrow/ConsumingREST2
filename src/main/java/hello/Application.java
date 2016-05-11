@@ -20,6 +20,6 @@ public class Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-        log.info("\n\n QUOTE = " + quote.getValue().getQuote() + "\n\n");
+        log.info("\n\n VIEW QUOTE = " + quote.getValue().getQuote() + "\n\n");
     }
 }
