@@ -38,7 +38,7 @@ public class Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
-        StateInfo stateInfo = restTemplate.getForObject("http://geo.groupkt.com/ip/6.131.144.10/json", Quote.class);
+        StateInfo stateInfo = restTemplate.getForObject("http://geo.groupkt.com/ip/6.131.144.10/json", StateInfo.class);
         log.info("\n\n VIEW State Info = " + stateInfo.toString() + "\n\n");
     }
 }
